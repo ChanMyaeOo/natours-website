@@ -45,15 +45,63 @@ body{
 .primary-main{
     text-transform: uppercase;
     color: #fff;
+
+    backface-visibility: hidden;
 }
 .primary-main-top{
     display: block;
     font-size: 60px;
     letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+    /* 
+    animation-iteration-count: 4;
+    animation-delay: 3s;
+    */
+    
 }
 .primary-main-sub{
     display: block;
     font-size: 20px;
     letter-spacing: 17px;
+    animation: moveInRight 1s ease-out;
 }
 /*-----x------- Header section -------x-------*/
+
+
+/*--------- Animation section ---------*/
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*----x----- Animation section -----x----*/
