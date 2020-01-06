@@ -34,15 +34,15 @@ body{
     clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0% 100%);
     position: relative;
 }
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 3rem;
     left: 3rem;
 }
-.logo{
+.header__logo{
     height: 3.5rem;
 }
-.title-box{
+.header__title-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -56,7 +56,7 @@ body{
     /* for animation */
     backface-visibility: hidden;
 }
-.primary-main-top{
+.primary-main--top{
     display: block;
     font-size: 6rem;
     letter-spacing: 3.5rem;
@@ -70,7 +70,7 @@ body{
     */
     
 }
-.primary-main-sub{
+.primary-main--sub{
     display: block;
     font-size: 2rem;
     letter-spacing: 1.7rem;
@@ -86,7 +86,7 @@ body{
     position: relative;
     font-size: 1.6rem;
 }
-.btn-white{
+.btn--white{
     background: #fff;
     color: #777;
 }
@@ -115,7 +115,7 @@ body{
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-.btn-animated{
+.btn--animated{
     animation: moveUpButton 1s ease-out .75s;
     animation-fill-mode: backwards;
 }
