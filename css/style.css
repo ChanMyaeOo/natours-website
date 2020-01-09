@@ -452,6 +452,49 @@ body {
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  opacity: 0;
+  visibility: hidden; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    padding: 5rem;
+    transition: all .8s;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
+  .popup__link {
+    height: 10vh;
+    position: relative; }
+    .popup__link .btn {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close {
+    font-size: 4rem;
+    position: absolute;
+    top: .2rem;
+    right: 2rem;
+    cursor: pointer; }
+  .popup__close-link:link, .popup__close-link:visited {
+    text-decoration: none;
+    color: #777; }
+
 .story {
   width: 55%;
   background: #fff;
